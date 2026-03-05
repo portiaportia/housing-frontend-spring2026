@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/housing-frontend-spring2026/static/css/main.be6ea011.css",
+    "main.js": "/housing-frontend-spring2026/static/js/main.a4dfd61d.js",
+    "index.html": "/housing-frontend-spring2026/index.html",
+    "main.be6ea011.css.map": "/housing-frontend-spring2026/static/css/main.be6ea011.css.map",
+    "main.a4dfd61d.js.map": "/housing-frontend-spring2026/static/js/main.a4dfd61d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be6ea011.css",
+    "static/js/main.a4dfd61d.js"
+  ]
+}
