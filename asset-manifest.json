@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/housing-frontend-spring2026/static/css/main.be6ea011.css",
-    "main.js": "/housing-frontend-spring2026/static/js/main.98ec03cd.js",
+    "main.css": "/housing-frontend-spring2026/static/css/main.732e02a8.css",
+    "main.js": "/housing-frontend-spring2026/static/js/main.508e6290.js",
     "index.html": "/housing-frontend-spring2026/index.html",
-    "main.be6ea011.css.map": "/housing-frontend-spring2026/static/css/main.be6ea011.css.map",
-    "main.98ec03cd.js.map": "/housing-frontend-spring2026/static/js/main.98ec03cd.js.map"
+    "main.732e02a8.css.map": "/housing-frontend-spring2026/static/css/main.732e02a8.css.map",
+    "main.508e6290.js.map": "/housing-frontend-spring2026/static/js/main.508e6290.js.map"
   },
   "entrypoints": [
-    "static/css/main.be6ea011.css",
-    "static/js/main.98ec03cd.js"
+    "static/css/main.732e02a8.css",
+    "static/js/main.508e6290.js"
   ]
 }
