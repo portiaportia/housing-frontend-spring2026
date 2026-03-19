@@ -24,6 +24,10 @@ body {
   flex-grow:1;
 }
 
+img {
+  max-width:100%;
+}
+
 /* Typography */
 .main-content > h2 {
   text-align:center;

@@ -1,0 +1,15 @@
+.house {
+    padding:5px;
+    margin:5px;
+    background:white;
+    border-radius: 5px;
+}
+
+.house h3 {
+    text-align: center;
+    color:navy;
+}
+
+.house img {
+    border-radius:5px;
+}
