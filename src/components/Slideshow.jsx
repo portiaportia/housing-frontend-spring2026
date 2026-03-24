@@ -22,11 +22,15 @@ const Slideshow = () => {
         setSlideIndex(slideIndex==images.length-1?0:slideIndex+1);
     };
 
+    const slideBackward = () => {
+        setSlideIndex(slideIndex ==0? images.length - 1:slideIndex-1);
+    }
+
     return (
         <section className="slideshow">
             <img src={images[slideIndex]} />
             <a id="next-arrow" onClick={slideForward} className="arrow" href="#">&rsaquo;</a>
-            <a id="prev-arrow" className="arrow" href="#">&lsaquo;</a>
+            <a id="prev-arrow" onClick={slideBackward} className="arrow" href="#">&lsaquo;</a>
         </section>
     );
 };
