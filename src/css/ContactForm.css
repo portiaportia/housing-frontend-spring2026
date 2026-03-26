@@ -1,0 +1,24 @@
+#contact-form {
+    display:block;
+    margin:auto;
+    padding-left:5%;
+}
+
+#contact-form input, #contact-form textarea, #contact-form button {
+    width:50%;
+}
+
+#contact-form textarea {
+    height:100px;
+}
+
+#contact-form button {
+    background:#6495ED;
+    color:white;
+    border:1px solid white;
+    padding:5px 0;
+}
+
+#contact-form p {
+    margin-top:5px;
+}

@@ -32,11 +32,14 @@ const ContactForm = () => {
   };
 
   return (
-      <form onSubmit={onSubmit}>
-        <input type="text" name="name"/>
-        <input type="email" name="email"/>
-        <textarea name="message"></textarea>
-        <button type="submit">Submit Form</button>
+      <form id="contact-form" onSubmit={onSubmit}>
+        <label for="txt-name">Name:</label>
+        <p><input type="text" name="name" id="txt-name"/></p>
+        <label for="txt-email">Email:</label>
+        <p><input type="email" name="email" id="txt-email" /></p>
+        <label for="txt-message">Message:</label>
+        <p><textarea name="message" id="txt-message"></textarea></p>
+        <p><button type="submit">Submit Form</button></p>
         <p>{feedback}</p>
       </form>
   );
