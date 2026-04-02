@@ -8,7 +8,7 @@ const Listings = () => {
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async() => {
-            const response = await axios.get("http://localhost:3001/api/houses");
+            const response = await axios.get("https://demo-backend-psr7.onrender.com/api/houses");
             setHouses(response.data);
         };
 
