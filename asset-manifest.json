@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/housing-frontend-spring2026/static/css/main.17e22bc0.css",
-    "main.js": "/housing-frontend-spring2026/static/js/main.6ffd9643.js",
+    "main.css": "/housing-frontend-spring2026/static/css/main.64c9ff92.css",
+    "main.js": "/housing-frontend-spring2026/static/js/main.123dd464.js",
     "static/media/modern-farmhouse.jpg": "/housing-frontend-spring2026/static/media/modern-farmhouse.cb4417a542389dfdcb14.jpg",
     "static/media/country-house.jpg": "/housing-frontend-spring2026/static/media/country-house.067ec277f060ff669ef0.jpg",
     "static/media/large-driveway.jpg": "/housing-frontend-spring2026/static/media/large-driveway.6f794cfd5161906f8d4a.jpg",
     "static/media/logo.jpg": "/housing-frontend-spring2026/static/media/logo.f8643c9099776fed4f62.jpg",
     "index.html": "/housing-frontend-spring2026/index.html",
-    "main.17e22bc0.css.map": "/housing-frontend-spring2026/static/css/main.17e22bc0.css.map",
-    "main.6ffd9643.js.map": "/housing-frontend-spring2026/static/js/main.6ffd9643.js.map"
+    "main.64c9ff92.css.map": "/housing-frontend-spring2026/static/css/main.64c9ff92.css.map",
+    "main.123dd464.js.map": "/housing-frontend-spring2026/static/js/main.123dd464.js.map"
   },
   "entrypoints": [
-    "static/css/main.17e22bc0.css",
-    "static/js/main.6ffd9643.js"
+    "static/css/main.64c9ff92.css",
+    "static/js/main.123dd464.js"
   ]
 }
