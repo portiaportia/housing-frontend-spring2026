@@ -6,7 +6,7 @@
     color:#B7DFDB;
     text-decoration: none;
     position:absolute;
-    top:35%;
+    top:0%;
     font-size:6em;
 }
 
@@ -16,4 +16,13 @@
 
 #prev-arrow {
     left:5%;
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 768px) {
+
+    .arrow {
+        top:35%;
+    }
+
 }
