@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
+import HouseDetails from "./components/HouseDetails";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />  
           <Route path="listings" element={<Listings />} />
+          <Route path="listings/:id" element={<HouseDetails />} />
           <Route path="contact" element={<Contact />} />   
         </Route>
       </Routes>

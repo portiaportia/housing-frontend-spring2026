@@ -1,38 +1,18 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
 import "../css/House.css";
-import HouseDialog from "./HouseDetailsDialog"
 
 const House = (props) => {
-    const [showDialog, setShowDialog] = useState(false);
-
-    const showHouseDetails = () => {
-        setShowDialog(true);
-    }
-
-    const closeHouseDetails = () => {
-        setShowDialog(false);
-    }
 
     return (
-        <>
-            {showDialog?(
-                <HouseDialog closeHouseDialog={closeHouseDetails} 
-                    _id={props._id}
-                    name={props.name}
-                    bedrooms={props.bedrooms}
-                    size={props.size}
-                    bathrooms={props.bathrooms}
-                    main_image={props.main_image}
-                    features={props.features} />
-            ):("")}
-
-            <section className="house" onClick={showHouseDetails}>
+        <Link to={`/listings/${props._id}`}>
+            <section className="house">
                 <img src={`https://demo-backend-psr7.onrender.com/images/${props.main_image}`} alt="house" />
                 <div className="house-description">
                     <h3>{props.name}</h3>
                 </div>
             </section>
-        </>
+        </Link>
     )
 };
 
