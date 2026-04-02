@@ -25,11 +25,22 @@
     display:block;
 }
 
+#details-previews {
+    border-radius:5px;
+}
+
 /* Larger Screens */
 @media only screen and (min-width: 768px) {
 
     .house {
-        max-width:25%;
+        max-width:95%;
     }
 
+    .house-details {
+        padding-left:10px;
+    }
+
+    .house-details strong {
+        color:#295095;
+    }
 }

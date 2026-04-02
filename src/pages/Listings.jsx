@@ -8,7 +8,7 @@ const Listings = () => {
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async() => {
-            const response = await axios.get("https://demo-backend-psr7.onrender.com/api/houses");
+            const response = await axios.get("https://spring-housing-backend.onrender.com/api/houses");
             setHouses(response.data);
         };
 
@@ -21,13 +21,14 @@ const Listings = () => {
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
+                        key={house._id}
                         _id={house._id}
-                            name={house.name} 
-                            size={house.size}
-                            bedrooms={house.bedrooms}
-                            bathrooms={house.bathrooms}
-                            main_image={house.main_image}
-                            features={house.features} />
+                        name={house.name} 
+                        size={house.size}
+                        bedrooms={house.bedrooms}
+                        bathrooms={house.bathrooms}
+                        main_image={house.main_image}
+                        features={house.features} />
                 ))}
             </div>
         </main>
