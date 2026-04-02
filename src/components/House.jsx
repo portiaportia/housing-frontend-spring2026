@@ -1,34 +1,37 @@
 import {useState} from "react";
 import "../css/House.css";
+import HouseDialog from "./HouseDetailsDialog"
 
 const House = (props) => {
     const [showDialog, setShowDialog] = useState(false);
 
-    const openDialog = () => {
+    const showHouseDetails = () => {
         setShowDialog(true);
-    };
+    }
 
-    const closeDialog = () => {
+    const closeHouseDetails = () => {
         setShowDialog(false);
-    };
+    }
 
     return (
         <>
-            <section className="house" onClick={openDialog}>
-                <h3>{props.title}</h3>
-                <img src={`https://demo-backend-psr7.onrender.com/images/${props.main_image}`} />
-            </section>
             {showDialog?(
-                <div className="w3-modal display-dialog">
-                    <div className="w3-modal-content">
-                        <div className="w3-container">
-                        <span onClick={closeDialog} className="w3-button w3-display-topright">&times;</span>
-                        <h3>{props.title}</h3>
-                        <p>Some text in the Modal..</p>
-                        </div>
-                    </div>
-                </div>
+                <HouseDialog closeHouseDialog={closeHouseDetails} 
+                    _id={props._id}
+                    name={props.name}
+                    bedrooms={props.bedrooms}
+                    size={props.size}
+                    bathrooms={props.bathrooms}
+                    main_image={props.main_image}
+                    features={props.features} />
             ):("")}
+
+            <section className="house" onClick={showHouseDetails}>
+                <img src={`https://demo-backend-psr7.onrender.com/images/${props.main_image}`} alt="house" />
+                <div className="house-description">
+                    <h3>{props.name}</h3>
+                </div>
+            </section>
         </>
     )
 };

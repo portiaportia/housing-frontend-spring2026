@@ -21,10 +21,13 @@ const Listings = () => {
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
-                        key={house._id}
                         _id={house._id}
-                        title={house.name}
-                        main_image={house.main_image} />
+                            name={house.name} 
+                            size={house.size}
+                            bedrooms={house.bedrooms}
+                            bathrooms={house.bathrooms}
+                            main_image={house.main_image}
+                            features={house.features} />
                 ))}
             </div>
         </main>
