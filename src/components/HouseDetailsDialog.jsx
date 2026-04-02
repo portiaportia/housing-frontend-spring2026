@@ -15,7 +15,7 @@ const HouseDetailsDialog = (props) => {
                     </span>
                     <div id="house-dialog-content">
                         <div className="columns">
-                            <img src={`https://demo-backend-psr7.onrender.com/images/${props.main_image}`} alt="house" />
+                            <img src={`https://spring-housing-backend.onrender.com/images/${props.main_image}`} alt="house" />
                             <div id="dialog-content">
                                             <h3>{props.name}</h3>
                                 <p>{props.bedrooms} Bedrooms</p>
