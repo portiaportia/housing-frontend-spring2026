@@ -29,7 +29,9 @@ const Listings = () => {
         <main id="listings" className="main-content">
             <h2>Listings</h2>
             <button id="btn-add-house" onClick={openAddDialog}>+</button>
-            {showAddDialog?(<AddHouse />):("")}
+            {showAddDialog?(<AddHouse 
+                                closeAddDialog={closeAddDialog}
+                                    />):("")}
             
             <div id="houses" className="columns">
                 {houses.map((house)=>(

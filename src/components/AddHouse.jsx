@@ -12,7 +12,7 @@ const AddHouse = () => {
                         &times;
                     </span>
                     <div id="house-dialog-content">
-                        <h1>Add HOuse</h1>
+                        <h3>Create New House</h3>
                     </div>
                 </div>
             </div>
