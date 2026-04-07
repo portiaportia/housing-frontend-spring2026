@@ -1,9 +1,19 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import House from "../components/House";
+import AddHouse from "../components/AddHouse";
 
 const Listings = () => {
     const [houses, setHouses] = useState([]);
+    const [showAddDialog, setShowAddDialog] = useState(false);
+
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        setShowAddDialog(false);
+    };
 
     //after the page has loaded
     useEffect(()=>{
@@ -18,6 +28,9 @@ const Listings = () => {
     return (
         <main id="listings" className="main-content">
             <h2>Listings</h2>
+            <button id="btn-add-house" onClick={openAddDialog}>+</button>
+            {showAddDialog?(<AddHouse />):("")}
+            
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
