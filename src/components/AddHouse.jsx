@@ -3,6 +3,11 @@ import {useState} from "react";
 
 const AddHouse = (props) => {
     const [result, setResult] = useState("");
+    const [prevSrc, setPrevSrc] = useState("");
+
+    const uploadImage = (e) => {
+        setPrevSrc(URL.createObjectURL(e.target.files[0]));
+    };
 
     const addHouseToServer = (e) => {
         e.preventDefault();
@@ -53,6 +58,18 @@ const AddHouse = (props) => {
                                 <label htmlFor="features">Features:</label>
                                 <textarea type="text" id="features" name="features"></textarea>
                             </p>
+
+                            <section>
+                                <p id="img-prev-section">
+                                    {prevSrc==""?(""):(
+                                        <img id="img-prev" src={prevSrc} />
+                                    )}
+                                </p>
+                                <p>
+                                    <label htmlFor="img">Select Image</label>
+                                    <input type="file" id="img" accept="images/*" onChange={uploadImage}></input>
+                                </p>
+                            </section>
 
                             <p>
                                 <button type="submit">Submit</button>
