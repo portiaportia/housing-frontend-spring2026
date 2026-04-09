@@ -80,7 +80,7 @@ const AddHouse = (props) => {
                                 </p>
                                 <p>
                                     <label htmlFor="img">Select Image</label>
-                                    <input type="file" id="img" accept="images/*" onChange={uploadImage}></input>
+                                    <input type="file" id="img" name="img" accept="images/*" onChange={uploadImage}></input>
                                 </p>
                             </section>
 
