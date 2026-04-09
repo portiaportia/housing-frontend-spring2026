@@ -2,6 +2,9 @@ import "../css/Dialog.css";
 
 const HouseDetailsDialog = (props) => {
 
+    const localImageLink = `http://localhost:3001/images/${props.main_image}`;
+    const renderImageLink = `https://spring-housing-backend.onrender.com/images/${props.main_image}`;
+    
     return (
         <div id="house-dialog" className="w3-modal">
             <div className="w3-modal-content">
@@ -15,7 +18,7 @@ const HouseDetailsDialog = (props) => {
                     </span>
                     <div id="house-dialog-content">
                         <div className="columns">
-                            <img src={`https://spring-housing-backend.onrender.com/images/${props.main_image}`} alt="house" />
+                            <img src={localImageLink} alt="house" />
                             <div id="dialog-content">
                                             <h3>{props.name}</h3>
                                 <p>{props.bedrooms} Bedrooms</p>

@@ -1,15 +1,27 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import House from "../components/House";
+import AddHouse from "../components/AddHouse";
 
 const Listings = () => {
     const [houses, setHouses] = useState([]);
+    const [showAddDialog, setShowAddDialog] = useState(false);
+
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        setShowAddDialog(false);
+    };
 
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async() => {
-            const response = await axios.get("https://spring-housing-backend.onrender.com/api/houses");
-            setHouses(response.data);
+            const localLink = "http://localhost:3001/api/houses";
+            const renderLink = "https://spring-housing-backend.onrender.com/api/houses";
+            const response = await axios.get(localLink);
+            setHouses(response.data);   
         };
 
         loadHouses();
@@ -18,6 +30,11 @@ const Listings = () => {
     return (
         <main id="listings" className="main-content">
             <h2>Listings</h2>
+            <button id="btn-add-house" onClick={openAddDialog}>+</button>
+            {showAddDialog?(<AddHouse 
+                                closeAddDialog={closeAddDialog}
+                                    />):("")}
+                                    
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 

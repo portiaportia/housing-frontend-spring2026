@@ -4,6 +4,8 @@ import HouseDialog from "./HouseDetailsDialog"
 
 const House = (props) => {
     const [showDialog, setShowDialog] = useState(false);
+    const localImageLink = `http://localhost:3001/images/${props.main_image}`;
+    const renderImageLink = `https://spring-housing-backend.onrender.com/images/${props.main_image}`;
 
     const showHouseDetails = () => {
         setShowDialog(true);
@@ -27,7 +29,7 @@ const House = (props) => {
             ):("")}
 
             <section className="house" onClick={showHouseDetails}>
-                <img src={`https://spring-housing-backend.onrender.com/images/${props.main_image}`} alt="house" />
+                <img src={localImageLink} alt="house" />
                 <div className="house-description">
                     <h3>{props.name}</h3>
                 </div>
