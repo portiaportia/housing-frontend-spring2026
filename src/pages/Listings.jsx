@@ -14,6 +14,11 @@ const Listings = () => {
     const closeAddDialog = () => {
         setShowAddDialog(false);
     };
+    
+    const addHouseToList = (house) => {
+        //adds the new house to the list of houses
+        setHouses((houses)=>[...houses,house]);
+    };
 
     //after the page has loaded
     useEffect(()=>{
@@ -33,12 +38,14 @@ const Listings = () => {
             <button id="btn-add-house" onClick={openAddDialog}>+</button>
             {showAddDialog?(<AddHouse 
                                 closeAddDialog={closeAddDialog}
+                                addHouseToList={addHouseToList}
                                     />):("")}
-                                    
+
             <div id="houses" className="columns">
                 {houses.map((house)=>(
                     <House 
-                        _id={house._id}
+                            key={house._id}
+                            _id={house._id}
                             name={house.name} 
                             size={house.size}
                             bedrooms={house.bedrooms}

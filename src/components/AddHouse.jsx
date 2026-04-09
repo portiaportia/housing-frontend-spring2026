@@ -9,14 +9,27 @@ const AddHouse = (props) => {
         setPrevSrc(URL.createObjectURL(e.target.files[0]));
     };
 
-    const addHouseToServer = (e) => {
+    const addHouseToServer = async(e) => {
         e.preventDefault();
         setResult("Sending...");
 
         const formData = new FormData(e.target);
         console.log(...formData);
 
-        setResult("Sent");
+        const postURLLocal = "http://localhost:3001/api/houses";
+        const postURLREnder = "https://spring-housing-backend.onrender.com/api/houses";
+        const response = await fetch(postURLLocal, {
+            "method":"POST",
+            "body":formData
+        });
+
+        if(response.status ==200){
+            setResult("House Added");
+            props.closeAddDialog();
+            props.addHouseToList(await response.json());
+        }else {
+            setResult("Error adding house");
+        }
     };
 
     return (
