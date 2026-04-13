@@ -69,6 +69,17 @@
   margin-right:10px;
 }
 
+#edit-links {
+  margin-top:20px;
+  margin-left:10px;
+}
+#edit-links a
+{
+  padding:2px;
+  color:#283B5F;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 600px) {
   #img-prev {
     max-width:30%;
