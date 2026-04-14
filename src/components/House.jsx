@@ -6,8 +6,8 @@ const House = (props) => {
     const [house, setHouse] = useState(props);
     const [showHouse, setShowHouse] = useState(true);
     const [showDialog, setShowDialog] = useState(false);
-    const localImageLink = `http://localhost:3001/images/${props.main_image}`;
-    const renderImageLink = `https://spring-housing-backend.onrender.com/images/${props.main_image}`;
+    const localImageLink = `http://localhost:3001/images/${house.main_image}`;
+    const renderImageLink = `https://spring-housing-backend.onrender.com/images/${house.main_image}`;
 
     const showHouseDetails = () => {
         setShowDialog(true);
@@ -35,14 +35,16 @@ const House = (props) => {
                     size={props.size}
                     bathrooms={props.bathrooms}
                     main_image={props.main_image}
-                    features={props.features} />
+                    features={props.features}
+                    updateHouse = {updateHouse}
+                    hideHouse = {hideHouse} />
             ):("")}
 
             {showHouse?(
                 <section className="house" onClick={showHouseDetails}>
                     <img src={localImageLink} alt="house" />
                     <div className="house-description">
-                        <h3>{props.name}</h3>
+                        <h3>{house.name}</h3>
                     </div>
                 </section>
             ):("")}

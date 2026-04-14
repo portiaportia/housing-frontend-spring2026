@@ -12,9 +12,28 @@ const HouseEditDailog = (props) => {
     const onSubmit = async(event) => {
         event.preventDefault();
         setResult("... sending");
+        const postURLLocal = "http://localhost:3001/api/houses";
+        const postURLREnder = "https://spring-housing-backend.onrender.com/api/houses";
 
         const formData = new FormData(event.target);
         console.log(...formData);
+
+        const response = await fetch(postURLLocal + `/${props._id}`,
+          {
+            method:"PUT",
+            body:formData
+          }
+        );
+
+        if(response.status == 200) {
+          setResult("House has been updated");
+          event.target.reset();
+          props.closeEditDialog();
+          props.updateHouse(await response.json());
+        }
+        else {
+          setResult("Error updating house");
+        }
 
     };
 
