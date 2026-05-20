@@ -1,6 +1,6 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
-import { SignedIn } from "@clerk/clerk-react";
+import { SignedIn, OrganizationProfile } from "@clerk/clerk-react";
 
 const Schedule = () => {
     useEffect(() => {
@@ -16,8 +16,8 @@ const Schedule = () => {
             <Cal namespace="15min"
                 calLink="portia-plante-f2lfae/30min"
                 style={{width:"100%",height:"100%",overflow:"scroll"}}
-                config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}} />;
-          </SignedIn>
+                config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}} />; 
+        </SignedIn>
         </main>
     );
 };

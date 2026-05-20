@@ -2,7 +2,8 @@ import {
   SignedIn,
   SignedOut,
   SignInButton,
-  UserButton
+  UserButton, 
+  OrganizationProfile
 } from "@clerk/clerk-react";
 import "../css/Login.css";
 

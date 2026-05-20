@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import "../css/Navigation.css";
-import { SignedIn } from "@clerk/clerk-react";
+import { SignedIn, useOrganization } from "@clerk/clerk-react";
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -10,6 +10,10 @@ const Navigation = () => {
         setMenuOpen(!menuOpen);
         console.log(menuOpen);
     };
+
+    const { membership } = useOrganization();
+
+    const isAdmin = membership?.role === "org:admin";
 
     return (
         <nav id="main-nav">
@@ -26,6 +30,11 @@ const Navigation = () => {
                 <li>
                     <Link to="/schedule">Schedule</Link>
                 </li>
+                {isAdmin && (
+                    <li>
+                    <Link to="/organization">Organization</Link>
+                    </li>
+                )}
                 </SignedIn>
             </ul>
         </nav>

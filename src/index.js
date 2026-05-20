@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
+import Organization from './pages/Organization';
 import { ClerkProvider } from '@clerk/clerk-react'
 
 
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="listings" element={<Listings />} />
             <Route path="contact" element={<Contact />} />   
             <Route path="schedule" element={<Schedule />} />
+            <Route path="organization" element={<Organization />} />
           </Route>
         </Routes>
       </BrowserRouter>
