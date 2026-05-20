@@ -17,15 +17,17 @@ const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 if (!clerkPubKey) {
   throw new Error("Missing REACT_APP_CLERK_PUBLISHABLE_KEY");
 }
-
+/*
 const basename =
   process.env.NODE_ENV === "production"
     ? "/housing-frontend-spring2026"
     : "/";
+*/
+const basename = "/housing-frontend-spring2026";
 
 const App = () => {
   return (
-    <ClerkProvider publishableKey={clerkPubKey}>
+    <ClerkProvider publishableKey={clerkPubKey} afterSignOutUrl="/housing-frontend-spring2026/">
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path = "/" element = {<Layout />}>
