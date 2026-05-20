@@ -8,21 +8,35 @@ import About from "./pages/About";
 import Listings from "./pages/Listings";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
+import { ClerkProvider } from '@clerk/clerk-react'
 
+
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
+if (!clerkPubKey) {
+  throw new Error("Missing REACT_APP_CLERK_PUBLISHABLE_KEY");
+}
+
+const basename =
+  process.env.NODE_ENV === "production"
+    ? "/housing-frontend-spring2026"
+    : "/";
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path = "/" element = {<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />  
-          <Route path="listings" element={<Listings />} />
-          <Route path="contact" element={<Contact />} />   
-          <Route path="schedule" element={<Schedule />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <BrowserRouter basename={basename}>
+        <Routes>
+          <Route path = "/" element = {<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />  
+            <Route path="listings" element={<Listings />} />
+            <Route path="contact" element={<Contact />} />   
+            <Route path="schedule" element={<Schedule />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ClerkProvider>
   )
 };
 

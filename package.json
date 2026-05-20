@@ -1,18 +1,20 @@
 {
-  "homepage": "/housing-frontend-spring2026",
+  "homepage": "https://portiaportia.github.io/housing-frontend-spring2026",
   "name": "housing-frontend-spring2026",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
+    "@clerk/clerk-react": "^5.61.6",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.14.0",
+    "crisp-sdk-web": "^1.1.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-router-dom": "^7.15.0",
+    "react-router-dom": "^7.15.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

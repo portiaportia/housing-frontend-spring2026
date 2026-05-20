@@ -1,0 +1,23 @@
+#login-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  text-decoration: underline;
+}
+
+.user-button{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}

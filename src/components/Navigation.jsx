@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import "../css/Navigation.css";
+import { SignedIn } from "@clerk/clerk-react";
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +21,12 @@ const Navigation = () => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/listings">Listings</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/schedule">Schedule</Link></li>
+                
+                <SignedIn>
+                <li>
+                    <Link to="/schedule">Schedule</Link>
+                </li>
+                </SignedIn>
             </ul>
         </nav>
     );
